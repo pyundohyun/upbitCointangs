@@ -1,4 +1,3 @@
-from msilib.schema import Error
 import pyupbit
 from datetime import datetime, timedelta
 from CoinEvent import *
