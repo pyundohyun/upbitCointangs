@@ -7,8 +7,12 @@ import jwt
 class CoinUtill:
     #기본 고정값 세팅 
     def __init__(self):
-        self.access_key = "NyIKDJ0Vv0hXXwRPrc21C6rg3yHoK5K6Hmh7gTRC"
-        self.secret_key = "RTPsgzqbaivdNTxQ8bdESucNm3UkJRLHx4YGvzKL"
+        #self.access_key = "NyIKDJ0Vv0hXXwRPrc21C6rg3yHoK5K6Hmh7gTRC"
+        #self.secret_key = "RTPsgzqbaivdNTxQ8bdESucNm3UkJRLHx4YGvzKL"
+        #우분투용
+        self.access_key = "GK09NvqjIj2iKmtHgBCB2BMFMD2sTLEjYeKv0yg3"
+        self.secret_key = "45b6HNNYi9Kxwd7Iu3XZ2WzWe84s0yus9rpylZ09"
+        
         self.requestURL = "https://api.upbit.com/v1/"
         self.limitMoney = 7000
         #기준3만원씩 투자 
