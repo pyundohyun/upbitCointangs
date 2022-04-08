@@ -67,7 +67,7 @@ async def findCoin():
             beforeTM = (datetime.today() - timedelta(1)).strftime("%Y%m%d")+str("0900")
 
             #손익분기 엑셀안만들어졌으면 만듬
-            if(os.path.isfile("손익결과_"+beforeTM+"_"+curTM+".xlsx") == False):
+            if(os.path.isfile("profitAndSell_tangs_"+beforeTM+"_"+curTM+".xlsx") == False):
                 try :
                     CoinEvent.getMyPaymentList()  
                 except Exception as Err:
