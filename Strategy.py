@@ -566,10 +566,13 @@ class Strategy:
                       log.debug("구매했던 코인명>>>"+coinName)
                       log.debug("손실 퍼센트::>>>"+str(coinProfit))
                       CoinEvent().buyAndGazzza(coinName,"bid",orderVolumn,self.get_order_coin_price(),"price")
-               
-               
                   elif(coinProfit <-3.5 ):
                       log.debug("이러다 다죽어222!!!!! 손절 ㅠ")
+                      log.debug("구매했던 코인명>>>"+coinName)
+                      log.debug("손실 퍼센트::>>>"+str(coinProfit))
+                      CoinEvent.buyAndGazzza(self,coinName,"ask",myCoinInfo["balance"],0,"market")  
+                  elif(coinProfit >= 3.5):
+                      log.debug("예상치보다 많이오름, 익절!")
                       log.debug("구매했던 코인명>>>"+coinName)
                       log.debug("손실 퍼센트::>>>"+str(coinProfit))
                       CoinEvent.buyAndGazzza(self,coinName,"ask",myCoinInfo["balance"],0,"market")  
