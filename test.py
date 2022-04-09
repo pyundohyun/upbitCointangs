@@ -54,8 +54,8 @@ async def findCoin():
         #print('[[[[[[[[[탕스 '+ str(cnt) +' 회전시작::: '+ str(curTime) +']]]]]]]]]')
         #print("  ")
 
-        log.debug('[[[[[[[[[탕스 '+ str(cnt) +' 회전시작::: '+ str(curTime) +']]]]]]]]]')
-        log.debug("  ")
+        #log.debug('[[[[[[[[[탕스 '+ str(cnt) +' 회전시작::: '+ str(curTime) +']]]]]]]]]')
+        #log.debug("  ")
 
         #오전 8시 ~ 9시에 전량매도 
         if(int(endTime) < 900 and int(endTime) > 853):
@@ -87,13 +87,13 @@ async def findCoin():
             #변동성 돌파전략으로 진행
             for item in tickers:
                 Strategy.goBuyCoin(item)
-                await asyncio.sleep(3)
+                #await asyncio.sleep(3)
             #sleep(0.3)
         #print("  ")
         #print('[[[[[[[[[ 회전끝::: '+str(curTime)+']]]]]]]]]')
         #sleep(3) #5초마다 돌게 
-        log.debug("  ")
-        log.debug('[[[[[[[[[ 회전끝::: '+str(curTime)+']]]]]]]]]')
+        #log.debug("  ")
+        #log.debug('[[[[[[[[[ 회전끝::: '+str(curTime)+']]]]]]]]]')
 
         cnt = cnt+1
         # #sleep(500)

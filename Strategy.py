@@ -548,15 +548,15 @@ class Strategy:
 
           #보유 코인인경우
           if CoinEvent().checkBuyCoin(coinName):
-               log.debug("이미 구매한 코인 서칭중....")
-               log.debug("coinName>>>"+coinName)
-               log.debug("basicPriceValue>>>"+str(basicPriceValue))
-               log.debug("curPrice>>>"+str(curPrice))
+            #    log.debug("이미 구매한 코인 서칭중....")
+            #    log.debug("coinName>>>"+coinName)
+            #    log.debug("basicPriceValue>>>"+str(basicPriceValue))
+            #    log.debug("curPrice>>>"+str(curPrice))
                
                myCoinInfo = CoinEvent().getMyProfit(coinName)
                coinProfit = myCoinInfo["profitPercent"]
 
-               log.debug(" wallet percent>>>"+str(coinProfit))
+            #    log.debug(" wallet percent>>>"+str(coinProfit))
 
                if(basicPriceValue > curPrice):
                   #lossPercent = float(((curPrice - basicPriceValue)/basicPriceValue))*100
@@ -591,11 +591,11 @@ class Strategy:
           else:
               #log.debug("첫 구매할 코인 서칭중....")
               if(curPrice >= basicPriceValue):
-                log.debug("구매할 코인명>>>"+coinName)
-                log.debug("현재가격>>"+str(curPrice))
-                log.debug("변동성지수 기준가격>>"+str(basicPriceValue))
-                log.debug("변동성 지수 >>"+str(kvalue))
-                log.debug("차이>>"+str(curPrice-basicPriceValue))
+                # log.debug("구매할 코인명>>>"+coinName)
+                # log.debug("현재가격>>"+str(curPrice))
+                # log.debug("변동성지수 기준가격>>"+str(basicPriceValue))
+                # log.debug("변동성 지수 >>"+str(kvalue))
+                # log.debug("차이>>"+str(curPrice-basicPriceValue))
                 
                 diff = curPrice-basicPriceValue
                 
