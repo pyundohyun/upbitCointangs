@@ -58,7 +58,7 @@ async def findCoin():
         #log.debug("  ")
 
         #오전 8시 ~ 9시에 전량매도 
-        if(int(endTime) < 900 and int(endTime) > 841):
+        if(int(endTime) < 900 and int(endTime) > 831):
             CoinEvent.allSelCoin()
             await asyncio.sleep(10)   
 
@@ -72,7 +72,7 @@ async def findCoin():
                     CoinEvent.getMyPaymentList()  
                 except Exception as Err:
                     log.debug('[[[[[[Error]]]]]] getMyPaymentList Error>>>'+str(Err))
-        elif(int(endTime) < 840 and int(endTime) > 800):
+        elif(int(endTime) < 830 and int(endTime) > 800):
             #log.debug('휴식시간---------------- 8시 ~~~ 8시 53분')
             print("휴식시간")
         else :
