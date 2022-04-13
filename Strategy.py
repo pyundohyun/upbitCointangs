@@ -535,7 +535,7 @@ class Strategy:
     #변동성 돌파전략
     def goBuyCoin(self,coinName):
 
-        #try:
+        try:
 
           log = Log().initLogger()
           Range = self.get_pre_Range(coinName)
@@ -617,8 +617,8 @@ class Strategy:
                             #시장가로 주문
                             CoinEvent().buyAndGazzza(coinName,"bid",orderVolumn,self.get_order_coin_price(),"price")
 
-        # except Exception as Err:
-        #     log.debug('[[[[[[Error]]]]]] goBuyCoin Error>>>'+str(Err))
+        except Exception as Err:
+            log.debug('[[[[[[Error]]]]]] goBuyCoin Error>>>'+str(Err))
 
 
         
