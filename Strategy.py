@@ -47,6 +47,7 @@ class Strategy:
         #k =  1 - (절대값 (시가) - 종가) / 고가 - 저가
         #해당코인의 현재가 정보추출
         df = pyupbit.get_ohlcv(coinName,"day",count=20)
+        sleep(1)
         #print(df)
         kvalue = 1 - (abs(df['open'] - df['close']) / (df['high'] - df['low']))
         #추세 평균값
@@ -97,6 +98,8 @@ class Strategy:
     #이동평균선 값 구하기
     def get_maVal(self, coinName , day):
         coinInfo = pyupbit.get_ohlcv(coinName, count=day)
+        #필수
+        sleep(1)
         #mean은 그룹화된 값의 평균
         #rolling은 갯수만큼 그룹화
         #마지막 행이 평균계산값이라서 -1

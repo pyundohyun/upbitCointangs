@@ -54,8 +54,8 @@ async def findCoin():
         #print('[[[[[[[[[탕스 '+ str(cnt) +' 회전시작::: '+ str(curTime) +']]]]]]]]]')
         #print("  ")
 
-        #log.debug('[[[[[[[[[탕스 '+ str(cnt) +' 회전시작::: '+ str(curTime) +']]]]]]]]]')
-        #log.debug("  ")
+        log.debug('[[[[[[[[[탕스 '+ str(cnt) +' 회전시작::: '+ str(curTime) +']]]]]]]]]')
+        # log.debug("  ")
 
         #오전 8시 ~ 9시에 전량매도 
         if(int(endTime) < 900 and int(endTime) > 831):
@@ -92,8 +92,8 @@ async def findCoin():
         #print("  ")
         #print('[[[[[[[[[ 회전끝::: '+str(curTime)+']]]]]]]]]')
         #sleep(3) #5초마다 돌게 
-        #log.debug("  ")
-        #log.debug('[[[[[[[[[ 회전끝::: '+str(curTime)+']]]]]]]]]')
+        # log.debug("  ")
+        # log.debug('[[[[[[[[[ 회전끝::: '+str(curTime)+']]]]]]]]]')
 
         cnt = cnt+1
         # #sleep(500)
